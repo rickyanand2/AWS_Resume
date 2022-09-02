@@ -55,7 +55,10 @@ body {
 }		
 
 /* --- End LinkedIn badge ----  */
-   
+ 
+
+
+
 h1 { 
 	margin: 0 0 16px 0; 
 	padding: 0 0 16px 0; 
@@ -70,7 +73,14 @@ h1 {
 	margin: 0 0 6px 0; 
 	position: relative; 
 }
-   
+ 
+h5 { 
+	font-size: 18px; 
+	margin: 0 0 6px 0; 
+	position: relative; 
+}
+
+
  h2 span { 
 	position: absolute; 
 	bottom: 0; 
