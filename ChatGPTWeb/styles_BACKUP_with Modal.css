@@ -1,0 +1,290 @@
+/* Use a modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif; /* Use the Inter font */
+  color: #333; /* Use a dark text color */
+}
+
+/* Use a large background image */
+body::before {
+  content: "";
+  /*
+  background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  /* URL of the background image */
+   background-image: url("Cyber security background.png");
+	background-size: cover; /* Cover the entire background */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-position: center; /* Center the image */
+  
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Use a transparent overlay on top of the background image */
+.overlay {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Use a minimalistic navigation bar */
+header {
+  background-color: transparent; /* Make the background transparent */
+  padding: 10px 20px; /* Use small padding */
+  position: fixed; /* Fix the navigation bar to the top of the page */
+  width: 100%; /* Make the navigation bar take up the full width of the page */
+  z-index: 2; /* Make sure the navigation bar is on top of the overlay */
+}
+
+header a {
+  color: #333; /* Use a dark text color */
+  text-decoration: none; /* Remove the underline from links */
+  font-weight: 600; /* Use a bold font weight */
+  transition: all 0.2s ease; /* Add a transition for hover effect */
+}
+
+header a:hover {
+  color: #000; /* Change the text color on hover */
+}
+
+/* Use a large and bold heading */
+h1 {
+  font-size: 48px; /* Use a large font size */
+  font-weight: 800; /* Use a very bold font weight */
+  text-align: center; /* Center the heading */
+  margin-top: 100px; /* Add some top margin */
+}
+
+/* Use a modern button style */
+.btn {
+  background-color: #333; /* Use a dark background color */
+  color: #fff; /* Use a light text color */
+  padding: 10px 20px; /* Use small padding */
+  border-radius: 50px; /* Round the corners */
+  text-decoration: none; /* Remove the underline from links */
+  font-weight: 600; /* Use a bold font weight */
+  transition: all 0.2s ease; /* Add a transition for hover effect */
+}
+
+.btn:hover {
+  background-color: #000; /* Change the background color on hover */
+}
+
+/* Use a card layout for content sections */
+section {
+  background-color: #fff; /* Use a light background color */
+    padding: 40px; /* Use large padding */
+  border-radius: 10px; /* Round the corners */
+  box-shadow: 0px 0px 10px #ccc; /* Add a subtle box shadow */
+  margin-top: 50px; /* Add some top margin */
+  max-width: 800px; /* Limit the maximum width */
+  margin: 0 auto; /* Center the card horizontally */
+}
+
+
+.projects {
+  display: grid; /* Use a grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Use 3 columns */
+  grid-gap: 20px; /* Add some gap between items */
+  margin-top: 50px; /* Add some top margin */
+}
+
+/* Use a modern style for project thumbnails */
+.project {
+  background-color: #333; /* Use a dark background color */
+  color: #fff; /* Use a light text color */
+  padding: 20px; /* Use medium padding */
+  border-radius: 10px; /* Round the corners */
+  text-decoration: none; /* Remove the underline from links */
+  transition: all 0.2s ease; /* Add a transition for hover effect */
+}
+
+.project:hover {
+  transform: scale(1.05); /* Scale up the thumbnail on hover */
+  box-shadow: 0px 0px 10px #ccc; /* Add a subtle box shadow on hover */
+}
+
+.project img {
+  width: 100%; /* Make the image take up the full width of the thumbnail */
+  border-radius: 10px 10px 0 0; /* Round the top corners of the image */
+}
+
+
+
+/* Use a modern style for the contact form */
+form {
+  max-width: 800px; /* Limit the maximum width */
+  margin: 50px auto; /* Center the form horizontally and add some top margin */
+}
+
+form label, form input, form textarea, form button {
+  display: block; /* Make each form element take up the full width of the container */
+  width: 100%; /* Make each form element take up the full width of the container */
+  margin-bottom: 20px; /* Add some bottom margin */
+}
+
+form input, form textarea {
+  padding: 10px; /* Use small padding */
+  border-radius: 5px; /* Round the corners */
+  border: none; /* Remove the border */
+}
+
+form button {
+  background-color: #333; /* Use a dark background color */
+  color: #fff; /* Use a light text color */
+  padding: 10px 20px; /* Use medium padding */
+  border-radius: 50px; /* Round the corners */
+  font-weight: 600; /* Use a bold font weight */
+  transition: all 0.2s ease; /* Add a transition for hover effect */
+}
+
+form button:hover {
+  background-color: #000; /* Change the background color on hover */
+}
+
+/* Use a modern style for the footer */
+footer {
+  background-color: #333; /* Use a dark background color */
+  color: #fff; /* Use a light text color */
+  padding: 20px; /* Use medium padding */
+    text-align: center; /* Center the text */
+  margin-top: 50px; /* Add some top margin */
+}
+
+footer a {
+  color: #fff; /* Use a light text color */
+  text-decoration: none; /* Remove the underline from links */
+  transition: all 0.2s ease; /* Add a transition for hover effect */
+}
+
+footer a:hover {
+  color: #ccc; /* Change the text color on hover */
+}
+
+/* Media queries to make the website responsive */
+@media (max-width: 600px) {
+  /* Stack the navigation links vertically on small screens */
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* Change the grid layout on small screens */
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+                    
+
+/* Navbar styles */
+.navbar {
+  position: fixed; /* fix the navbar to the top of the page */
+  top: 0; /* place the navbar at the top of the page */
+  left: 0;
+  right: 0;
+  background-color: #162447; /* background color of the navbar */
+  color: #f5f5f5; /* text color of the navbar */
+  z-index: 1; /* ensure the navbar is above other elements */
+}
+
+/* Hide the navbar when the screen size is less than 600px */
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: none; /* hide the navbar */
+  }
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #555;
+    color: #f5f5f5;
+}
+
+
+
+
+
+
+/* Style for the modal overlay */
+.modal {
+  position: fixed; /* Position the modal at the center of the screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Use a semi-transparent black background */
+  display: flex; /* Center the modal content vertically and horizontally */
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* Make sure the modal is on top of other elements */
+}
+
+
+
+
+
+
+/* Style for the modal content */
+.modal-content {
+  background-color: #fff; /* Use a white background */
+  padding: 20px; /* Add some padding */
+  border-radius: 10px; /* Round the corners */
+  box-shadow: 0px 0px 10px #ccc; /* Add a subtle box shadow */
+  text-align: center; /* Center the text */
+}
+
+.modal-content img {
+  max-width: 100%; /* Make the image take up the full width of the modal */
+}
+
+/* Style for the close button */
+.modal-close {
+  background-color: #333; /* Use a dark background color */
+  color: #fff; /* Use a light text color */
+  border: none; /* Remove the border */
+  padding: 10px 20px; /* Use medium padding */
+  border-radius: 20px; /* Round the corners */
+  text-transform: uppercase; /* Use uppercase text */
+  font-weight: bold; /* Use bold text */
+  margin-top: 20px; /* Add some top margin */
+  cursor: pointer; /* Use a pointer cursor */
+  transition: all 0.2s ease; /* Add a transition for hover effect */
+}
+
+.modal-close:hover {
+  background-color: #ccc; /* Change the background color on hover */
+}     
