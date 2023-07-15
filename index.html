@@ -772,19 +772,16 @@
                                 </p>
                                 </div>
                                 <div class="mb-2">
-                                  The network is create in an Azure as a Resource Group. 
-                                  It consists of a security Group with a Virtual Network that had secure Inbound Firewall Rules, which by defaut denies all inbound traffic and only allows filtered traffic coming from a trusted source.
+                                  A network was created in Azure as a Resource Group. It consists of a security group with a virtual network that has secure inbound firewall rules. By default, all inbound traffic is denied, and only filtered traffic from a trusted source is allowed. The network consists of a total of three virtual machines: two virtual machines were assigned as web servers in the security group, and one virtual machine was used as a jumpbox. The jumpbox VM was used to provide access to the web servers by filtering traffic.
 
-                                  Network in total consists of 3 Virtual Machines, 2 Virtual machines were assigned as Web Servers in the security group and 1 Virtual machine was used as a Jumpbox. The jumpbox Vm was used to provide access to web servers filtering traffic. 
-                                  
                                 </div>  
                                 <div>
                                   <p class="text-muted mb-4">       
                                     <p class="fw-bold mb-1">BENEFITS</p>
-                                    The Webserver in the network plans are secure and all internet traffic is filtered first through the jumpbox server and the firewall rules of the Web servers. 
 
-                                    The two web servers are also configured to be in the same availability set and have minimum downtime utilizing the load balancer to provide smooth access to their resources even while processing high volume of requests.
-                                   </p>
+                                    The web servers in the network are secure because all internet traffic is filtered first through the jumpbox server and the firewall rules of the web servers. The two web servers are also configured to be in the same availability set, which minimizes downtime. The load balancer provides smooth access to their resources even when processing high volumes of requests.
+                                    
+                                    </p>
                                 </div>
                                  
                     </div>
