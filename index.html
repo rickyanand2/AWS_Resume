@@ -27,6 +27,7 @@
     @keyframes pulse{0%,100%{box-shadow:0 0 0 0 #b7f77a33}50%{box-shadow:0 0 0 9px #b7f77a00}}
     @media (prefers-reduced-motion:no-preference){.hero-grid>div{animation:rise .8s cubic-bezier(.2,.8,.2,1) both}.hero-grid .status{animation:rise .8s .16s cubic-bezier(.2,.8,.2,1) both}.dot{animation:pulse 2.4s infinite}body.motion .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.8,.2,1)}body.motion .reveal.in{opacity:1;transform:none}.card,.study{transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s,border-color .3s}.metric{transition:background .25s}.metric:hover{background:#10231e}}
     @media (min-width:851px){.credentials-grid{grid-template-columns:repeat(4,1fr)}}
+    .profile-grid{display:block}.profile .portrait{display:none}.contact-portrait{display:block;width:116px;height:116px;object-fit:cover;object-position:center 22%;margin-top:1.6rem;border-radius:50%;border:1px solid var(--aqua);box-shadow:0 0 0 7px #75ded012}
     .ai-note{max-width:800px;margin:-1.2rem 0 2rem;padding:1rem 1.2rem;border-left:2px solid var(--aqua);background:#0c1b17;color:#cbd8d3}.ai-note b{color:var(--aqua)}a[href*="github.com"]{display:none!important}
   </style>
 </head>
@@ -66,6 +67,7 @@
     document.querySelector('#contact p').textContent='Melbourne, Australia. Connecting on senior cyber governance, risk, security assurance, third-party risk and governance architecture opportunities.';
     const architectureCard=[...document.querySelectorAll('.card')].find(el=>el.querySelector('h3')?.textContent.includes('Security awareness'));
     if(architectureCard){architectureCard.querySelector('h3').textContent='Governance architecture';architectureCard.querySelector('p').textContent='Shape practical governance structures that connect risk, controls, supplier assurance, technology change and executive decision-making.';architectureCard.querySelector('.tags').innerHTML='<span class="tag">GRC</span><span class="tag">SECURITY ARCHITECTURE</span>';}
+    const contactCopy=document.querySelector('#contact .contact-in>div:first-child');if(contactCopy){const portrait=document.createElement('img');portrait.className='contact-portrait';portrait.src='img/ricky-anand-portrait-v2.png';portrait.alt='Ricky Anand';contactCopy.append(portrait);}
     document.body.classList.add('motion');const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');observer.unobserve(entry.target)}}),{threshold:.14});document.querySelectorAll('.role,.card,.study,.credential').forEach(el=>{el.classList.add('reveal');observer.observe(el)});
   </script>
 </body>
