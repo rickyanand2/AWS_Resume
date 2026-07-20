@@ -67,6 +67,13 @@
     document.querySelector('#contact p').textContent='Melbourne, Australia. Connecting on senior cyber governance, risk, security assurance, third-party risk and governance architecture opportunities.';
     const architectureCard=[...document.querySelectorAll('.card')].find(el=>el.querySelector('h3')?.textContent.includes('Security awareness'));
     if(architectureCard){architectureCard.querySelector('h3').textContent='Governance architecture';architectureCard.querySelector('p').textContent='Shape practical governance structures that connect risk, controls, supplier assurance, technology change and executive decision-making.';architectureCard.querySelector('.tags').innerHTML='<span class="tag">GRC</span><span class="tag">SECURITY ARCHITECTURE</span>';}
+    document.querySelector('.status strong').textContent='Clear ownership. Better decisions.';
+    document.querySelector('#experience h2').textContent='Built from technical delivery into cyber governance.';
+    document.querySelector('#contributions h2').textContent='Where I add value.';
+    document.querySelector('#credentials h2').textContent='Credentials and professional development.';
+    const publicSectorMetric=[...document.querySelectorAll('.metric')].find(el=>el.querySelector('strong')?.textContent.includes('Gov / Infra'));if(publicSectorMetric){publicSectorMetric.querySelector('strong').textContent='Public sector';publicSectorMetric.querySelector('span').textContent='Victorian Government & local government';}
+    document.querySelector('#contact h2').textContent='Melbourne-based. Open to the right conversation.';
+    document.querySelector('#contact p').textContent='Senior governance, assurance and cyber-risk roles across government, critical infrastructure and complex organisations.';
     const contactCopy=document.querySelector('#contact .contact-in>div:first-child');if(contactCopy){const portrait=document.createElement('img');portrait.className='contact-portrait';portrait.src='img/ricky-anand-portrait-v2.png';portrait.alt='Ricky Anand';contactCopy.append(portrait);}
     document.body.classList.add('motion');const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');observer.unobserve(entry.target)}}),{threshold:.14});document.querySelectorAll('.role,.card,.study,.credential').forEach(el=>{el.classList.add('reveal');observer.observe(el)});
   </script>
